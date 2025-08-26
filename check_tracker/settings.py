@@ -51,6 +51,7 @@ REST_FRAMEWORK = {
 }
 ALLOWED_HOSTS = ["https://bankcheaksdashboard-backend-1.onrender.com", "localhost", "*"]
 
+# settings.py
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware", 
@@ -61,8 +62,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+ ] 
 
+# CORS_ALLOWED_ORIGINS = [
+#     "https://https://zippy-cannoli-c2d5b4.netlify.app",
+#     "http://localhost:3000"
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'check_tracker.urls'
 
 TEMPLATES = [
@@ -134,7 +140,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
