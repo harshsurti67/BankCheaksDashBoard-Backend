@@ -49,6 +49,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
+ALLOWED_HOSTS = ["https://bankcheaksdashboard-backend-1.onrender.com", "localhost", "*"]
+
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware", 
