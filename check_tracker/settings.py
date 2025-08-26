@@ -64,11 +64,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
  ] 
 
-# CORS_ALLOWED_ORIGINS = [
-#     "https://https://zippy-cannoli-c2d5b4.netlify.app",
-#     "http://localhost:3000"
-# ]
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://inquisitive-speculoos-fcc4ca.netlify.app",
+    "https://12bankcheck.netlify.app"
+]
+# CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'check_tracker.urls'
 
 TEMPLATES = [
