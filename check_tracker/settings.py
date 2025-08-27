@@ -78,9 +78,7 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://inquisitive-speculoos-fcc4ca.netlify.app",
-    "https://12bankcheck.netlify.app",
-    "https://bankchecks11.netlify.app"
+   "https://bank113.netlify.app",
 
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
