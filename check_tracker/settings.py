@@ -23,9 +23,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Optional: additional dirs
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -60,13 +60,14 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
-ALLOWED_HOSTS = ["https://bankcheaksdashboard-backend-1.onrender.com", "localhost", "*"]
+ALLOWED_HOSTS = ["https://bankcheaksdashboard-backend-5.onrender.com", "localhost", "*"]
 
 # settings.py
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware", 
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,10 +75,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
  ] 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOWED_ORIGINS = [
     "https://inquisitive-speculoos-fcc4ca.netlify.app",
-    "https://12bankcheck.netlify.app"
+    "https://12bankcheck.netlify.app",
+    "https://bankchecks11.netlify.app"
+
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'check_tracker.urls'
