@@ -79,6 +79,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOWED_ORIGINS = [
    "https://bank113.netlify.app",
+   "https://rococo-duckanoo-5fa365.netlify.app"
 
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
